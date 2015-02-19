@@ -25,4 +25,33 @@ tools:context="com.hellbilling.kapitola14.Activity1"
     android:text="Set the Time"
     android:onClick="chooseTime"
     />
+<TextView android:id="@+id/dateAndTime"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Tieto hodiny nejdu nastavit, pouzivaju cas len zo zariadenia"
+    />
+<AnalogClock android:id="@+id/analog"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    />
+<DigitalClock android:id="@+id/digital"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:gravity="center_horizontal"
+    />
+<TextView android:id="@+id/pokec"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="toto je len ukazka seekBaru"
+    />
+<TextView android:id="@+id/seekValue"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    />
+<SeekBar
+    android:id="@+id/seekBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
 </LinearLayout>
