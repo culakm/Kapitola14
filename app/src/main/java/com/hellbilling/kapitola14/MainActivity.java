@@ -59,7 +59,11 @@ public class MainActivity extends ListActivity {
                 startActivity(intent);
                 break;
             case 1:
-                intent = new Intent(this, Activity2.class); //toto bohuzial zacina malym pismenom
+                intent = new Intent(this, Activity2.class);
+                startActivity(intent);
+                break;
+            case 2:
+                intent = new Intent(this, Activity3.class);
                 startActivity(intent);
                 break;
         }
