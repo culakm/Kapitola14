@@ -5,7 +5,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_activity1">Nastavenie datumu,casu,seekbar</string>
-    <string name="title_activity_activity2">Viac tabs</string>
+    <string name="title_activity_activity2">Viac tabs, default button</string>
     <string name="title_activity_activity3">Dynamic tabs</string>
+    <string name="title_activity_activity4">Flip1</string>
+    <string name="title_activity_activity5">Dynamic flip</string>
+    <string name="title_activity_activity6">Suflik SlidingDrawer - asi depricated</string>
 
 </resources>

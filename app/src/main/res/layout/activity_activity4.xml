@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <Button android:id="@+id/flip_me"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Flip Me!"
+        android:onClick="flip"
+        />
+    <ViewFlipper android:id="@+id/details"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <!-- prve zobrazenie -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#FF00FF00"
+            android:text="This is the first panel"
+            />
+        <!-- druhe zobrazenie _-->
+        <LinearLayout
+            android:id="@+id/my_custom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/my_text_label"
+                android:text="toto:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                />
+            <TextView
+                android:id="@+id/my_text_hodnota"
+                android:text=" je text"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+        <!-- tretie zobrazenie -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF00"
+            android:text="This is the third panel"
+            />
+    </ViewFlipper>
+</LinearLayout>
