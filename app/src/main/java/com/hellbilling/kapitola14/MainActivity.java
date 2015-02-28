@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class MainActivity extends ListActivity {
@@ -37,6 +38,8 @@ public class MainActivity extends ListActivity {
                 activitiesList.add(fieldValue);
             }
         }
+
+        Collections.sort(activitiesList);
        // Toast.makeText(getBaseContext(), str, Toast.LENGTH_LONG).show();
 
         // Automaticky podla vsetkych stringov co obsahuju title_activity_activity v strings.xml
@@ -80,6 +83,18 @@ public class MainActivity extends ListActivity {
                 break;
             case 6:
                 intent = new Intent(this, Activity7.class);
+                startActivity(intent);
+                break;
+            case 7:
+                intent = new Intent(this, Activity8.class);
+                startActivity(intent);
+                break;
+            case 8:
+                intent = new Intent(this, Activity9.class);
+                startActivity(intent);
+                break;
+            case 9:
+                intent = new Intent(this, Activity10.class);
                 startActivity(intent);
                 break;
         }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hellbilling.kapitola14" >
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -43,6 +43,18 @@
         <activity
             android:name=".Activity7"
             android:label="@string/title_activity_activity7" >
+        </activity>
+        <activity
+            android:name=".Activity8"
+            android:label="@string/title_activity_activity8" >
+        </activity>
+        <activity
+            android:name=".Activity9"
+            android:label="@string/title_activity_activity9" >
+        </activity>
+        <activity
+            android:name=".Activity10"
+            android:label="@string/title_activity_activity10" >
         </activity>
     </application>
 

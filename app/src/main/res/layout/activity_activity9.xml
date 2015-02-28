@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:layout_alignBaseline="@+id/myUrl"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:id="@+id/urlText"
+        android:text="URL:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/myUrl"
+        android:layout_toRightOf="@id/back"
+        android:layout_alignParentTop="true"/>
+    <EditText
+        android:id="@id/myUrl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/urlText"
+
+        android:layout_alignParentTop="true"/>
+    <Button
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:layout_alignBaseline="@+id/myUrl"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <WebView
+        android:id="@+id/webkit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/back"
+        android:layout_alignLeft="@id/back"
+    />
+</RelativeLayout>
