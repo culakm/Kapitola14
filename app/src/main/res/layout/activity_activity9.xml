@@ -5,8 +5,6 @@
     android:layout_height="match_parent">
     <Button
         android:id="@+id/back"
-        android:inputType="text"
-        android:imeOptions="actionSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BACK"
@@ -20,9 +18,11 @@
         android:layout_alignBaseline="@+id/myUrl"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@id/back"
-        android:onClick="changeURL" />
+        android:onClick="buttonHandler" />
     <EditText
         android:id="@+id/myUrl"
+        android:inputType="text"
+        android:imeOptions="actionSend"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/go"
