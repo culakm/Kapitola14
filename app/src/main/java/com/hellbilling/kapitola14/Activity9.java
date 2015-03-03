@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.webkit.WebView;
 import android.widget.EditText;
@@ -14,7 +15,9 @@ import android.widget.Toast;
 Co treba dorobit:
 - formatovanie vyzoru-
 - ako je to s ponechanim tlacitiek pri funkcnom browseri?
-- otvaranie a zatvaranie klavesnice
+- focus, otvaranie a zatvaranie klavesnice
+    http://stackoverflow.com/questions/1109022/close-hide-the-android-soft-keyboard
+    http://stackoverflow.com/questions/2150656/how-to-set-focus-on-a-view-when-a-layout-is-created-and-displayed
 - back
 
  */
@@ -47,6 +50,9 @@ public class Activity9 extends Activity
         // nastavenie listeneru na url aby sa dalo pouzit send
         Url = (EditText) findViewById(R.id.myUrl);
         Url.setOnEditorActionListener(this); // tu sa nastavil listener onEditorAction
+
+        // Zatvaranie klavesnice, toto funfuje
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
     // metoda volana buttonom go
@@ -67,9 +73,11 @@ public class Activity9 extends Activity
     }
 
     private void changeURL() {
+        // Zatvaranie klavesnice, toto nefunfuje
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         Toast.makeText(getApplicationContext(), "Menim URL", Toast.LENGTH_SHORT).show();
         String message = Url.getText().toString();
-        browser.loadUrl("http://"+message);
-        //browser.loadData("<html><body><b>Tuto sa zobrazi message "+message+"</b></body></html>","text/html","UTF-8");
+        //browser.loadUrl("http://"+message);
+        browser.loadData("<html><body><b>Tuto sa zobrazi message "+message+"</b></body></html>","text/html","UTF-8");
     }
 }
